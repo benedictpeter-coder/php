@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Lagos Library</title>
+    <title>online bookshop</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,36 +11,49 @@
 </head>
 <body>
 
-    <h1 id="mainHeading">Lagos Library</h1>
+    <h1 id="mainHeading">online bookshop</h1>
 
     <nav>
         <a href="index.html">Home</a> |
         <a href="books.html">Books</a> |
-        <a href="membership.html">Membership</a> |
+        
         <a href="gallery.html">Gallery</a> |
         <a href="contact.html">Contact Us</a>
     </nav>
 
     <hr>
 
-    <h2>Welcome to Lagos Library</h2>
+    <h2>Welcome to online bookshop</h2>
     <p id="welcomeMessage"></p>
-    <img src="library.png" alt="Library Building" width="350">
-    <button onclick="toggleInfo()">Show / Hide Library Information</button>
 
-<p id="extraInfo" style="display:none;">
-Lagos Library offers thousands of educational books, digital resources,
-quiet study rooms and free internet access for all registered members.
-</p>
+<div style="display: flex; flex-direction: column; align-items: center; width: 100%; gap: 15px; font-family: 'Poppins', sans-serif;">
 
-<br>
+    <!-- Button 1 -->
+    <button onclick="toggleInfo()" style="background: #1b4d3e; color: white; border: none; padding: 10px 20px; font-size: 14px; font-weight: 600; border-radius: 5px; cursor: pointer; transition: background 0.2s ease; width: fit-content;">
+        Show / Hide Library Information
+    </button>
 
-<button onclick="changeHeading()">Change Heading</button>
+    <!-- Paragraph 1 (Hidden by default) -->
+    <p id="extraInfo" style="display: none; background: #ffffff; border-top: 4px solid #e5a93c; padding: 15px; margin: 0; color: #2d312e; line-height: 1.6; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); text-align: center; max-width: 500px;">
+        Our online bookshop offers thousands of educational books, digital resources,
+        quiet study rooms and free internet access for all registered members.
+    </p>
 
-    <p>
-        Lagos Library provides access to thousands of educational,
+    <!-- Spacer replacement instead of raw <br> tags for uniform alignment -->
+    <div style="height: 10px;"></div>
+
+    <!-- Button 2 -->
+    <button onclick="changeHeading()" style="background: #1b4d3e; color: white; border: none; padding: 10px 20px; font-size: 14px; font-weight: 600; border-radius: 5px; cursor: pointer; transition: background 0.2s ease; width: fit-content;">
+        Change Heading
+    </button>
+
+    <!-- Paragraph 2 -->
+    <p style="background: #ffffff; border-top: 4px solid #1b4d3e; padding: 15px; margin: 0; color: #2d312e; line-height: 1.6; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); text-align: center; max-width: 500px;">
+        Our online bookshop provides access to thousands of educational,
         research, and recreational books for students and the community.
     </p>
+
+</div>
 
     <h3>Our Services</h3>
     <ul>
@@ -60,7 +73,7 @@ quiet study rooms and free internet access for all registered members.
 
     <footer>
         <hr>
-        <p>&copy; 2026 Lagos Library. All Rights Reserved.</p>
+        <p>&copy; 2026 online bookshop. All Rights Reserved.</p>
     </footer>
     <script src="script.js"></script>
 </body>

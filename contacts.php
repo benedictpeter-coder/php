@@ -11,7 +11,7 @@ $result = mysqli_query($conn, $sql);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Messages - Lagos Library</title>
+    <title>Contact Messages - online bookshop</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,7 +26,7 @@ $result = mysqli_query($conn, $sql);
     <nav>
         <a href="index.html">Home</a> |
         <a href="books.html">Books</a> |
-        <a href="membership.html">Membership</a> |
+       
         <a href="gallery.html">Gallery</a> |
         <a href="contact.html">Contact Us</a>
     </nav>

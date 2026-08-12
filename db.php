@@ -1,48 +1,37 @@
 <?php
-// ===================================================
-// db.php - Connects & Auto-Creates Tables If Missing
-// ===================================================
+// Force XAMPP to show errors instead of a blank page or 500 error
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
-$host     = "localhost";
-$user     = "root";
-$password = "";
-$database = "LagosLibrary";
+// ====================================================================
+// db.php - XAMPP Auto-Connect & Database Config
+// ====================================================================
 
-// 1. Connect to MySQL Server
+$host     = "127.0.0.1"; // 127.0.0.1 bypasses DNS issues in XAMPP
+$user     = "root";      // Default XAMPP username
+$password = "";          // Default XAMPP password is empty
+$database = "OnlineLibrary";
+
+// 1. Connect to XAMPP MySQL Server
 $conn = mysqli_connect($host, $user, $password);
 
 if (!$conn) {
-    die("MySQL Connection Failed: " . mysqli_connect_error());
+    die("<b style='color:red;'>XAMPP MySQL Error:</b> Connection refused! Please open your XAMPP Control Panel and click 'Start' next to MySQL.");
 }
 
-// 2. Create Database if it doesn't exist
+// 2. Create Database if missing
 $sql_db = "CREATE DATABASE IF NOT EXISTS " . $database;
 if (!mysqli_query($conn, $sql_db)) {
-    die("Database Creation Error: " . mysqli_error($conn));
+    die("XAMPP Database Creation Error: " . mysqli_error($conn));
 }
 
 // 3. Select the database
 if (!mysqli_select_db($conn, $database)) {
-    die("Database Selection Error: " . mysqli_error($conn));
+    die("XAMPP Database Selection Error: " . mysqli_error($conn));
 }
 
-// 4. Create 'members' table if it doesn't exist
-$sql_members = "CREATE TABLE IF NOT EXISTS members (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    full_name VARCHAR(100) NOT NULL,
-    email VARCHAR(100) NOT NULL,
-    phone VARCHAR(20) NOT NULL,
-    membership_type VARCHAR(50) NOT NULL,
-    interests VARCHAR(255),
-    additional_notes TEXT,
-    membership_duration VARCHAR(20) NOT NULL,
-    registration_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-)";
-if (!mysqli_query($conn, $sql_members)) {
-    die("Members Table Error: " . mysqli_error($conn));
-}
-
-// 5. Create 'contacts' table if it doesn't exist
+// 4. Create 'contacts' table if missing
 $sql_contacts = "CREATE TABLE IF NOT EXISTS contacts (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
@@ -52,8 +41,10 @@ $sql_contacts = "CREATE TABLE IF NOT EXISTS contacts (
     submission_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 )";
 if (!mysqli_query($conn, $sql_contacts)) {
-    die("Contacts Table Error: " . mysqli_error($conn));
+    die("XAMPP Table Error: " . mysqli_error($conn));
 }
 
-// NOTE: Connection remains open and ready for your processing scripts!
+// Success message for confirmation
+echo "<h3 style='color:green;'>✓ Success! XAMPP connected to MySQL flawlessly.</h3>";
+echo "<p>Database '<b>$database</b>' and '<b>contacts</b>' table are ready to go!</p>";
 ?>

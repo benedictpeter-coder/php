@@ -14,21 +14,25 @@ window.onload = function () {
         if (userName !== null && userName.trim() !== "") {
 
             welcomeMessage.innerHTML =
-                "Welcome to Lagos Library, <strong>" +
-                userName +
+                "Welcome to our online Library, <strong>" +
+                userName + "  Explore thousands of educational books, " +
+                "digital resources, and research materials tailored for your success. " +
+                "We are glad to support your learning journey today!"
                 "</strong>!";
 
         } else {
 
             welcomeMessage.innerHTML =
-                "Welcome to Lagos Library!";
+                "Welcome to our online Library! Explore thousands of educational books, " +
+                "digital resources, and research materials tailored for your success. " +
+                "We are glad to support your learning journey today!";
 
         }
     }
 
 
     // ==============================
-    // Form Validation (Contact & Membership)
+    // Form Validation (Contact Form Only)
     // ==============================
 
     let forms = document.querySelectorAll("form");
@@ -107,20 +111,6 @@ window.onload = function () {
 
 
             // ==============================
-            // Check membership_type (if present in this form)
-            // ==============================
-
-            let membershipType = form.querySelector("#membership_type");
-
-            if (membershipType && membershipType.hasAttribute("required") && membershipType.value === "") {
-
-                valid = false;
-                membershipType.style.border = "2px solid red";
-
-            }
-
-
-            // ==============================
             // Handle Validation Outcome
             // ==============================
 
@@ -132,7 +122,7 @@ window.onload = function () {
                 alert("Please complete all required fields correctly before submitting.");
 
             }
-            // If valid, the form submits directly to PHP (process_contacts.php or process_membership.php)
+            // If valid, the form submits directly to PHP (process_contacts.php)
 
         });
 

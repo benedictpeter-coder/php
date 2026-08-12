@@ -1,8 +1,10 @@
 body{
     font-family:'Poppins',sans-serif;
     margin:0;
-    background:#f4f4f4;
-    color:#333;
+    /* Soft, warm cream background to reduce eye strain */
+    background:#fcfbf7;
+    /* Deep charcoal for readable text */
+    color:#2d312e;
 }
 
 h1,h2,h3{
@@ -10,7 +12,8 @@ h1,h2,h3{
 }
 
 nav{
-    background:#004080;
+    /* Deep emerald green */
+    background:#1b4d3e;
     display:flex;
     justify-content:center;
     gap:20px;
@@ -24,7 +27,8 @@ nav a{
 }
 
 nav a:hover{
-    color:yellow;
+    /* Warm gold accent */
+    color:#e5a93c;
 }
 
 body > *:not(nav){
@@ -51,13 +55,15 @@ table{
 }
 
 table th{
-    background:#004080;
+    /* Matching deep emerald green headers */
+    background:#1b4d3e;
     color:white;
 }
 
 table th,
 table td{
-    border:1px solid #999;
+    /* Muted earthy border */
+    border:1px solid #c2c9c4;
     padding:10px;
     text-align:center;
 }
@@ -66,6 +72,8 @@ form{
     background:white;
     padding:20px;
     border-radius:8px;
+    /* Soft shadow to fit the modern aesthetic */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
 input,
@@ -86,29 +94,32 @@ input[type=radio]{
 }
 
 input[type=submit]{
-    background:#004080;
+    background:#1b4d3e;
     color:white;
     border:none;
     cursor:pointer;
 }
 
 input[type=submit]:hover{
-    background:#0066cc;
+    /* Medium forest green hover state */
+    background:#276e59;
 }
 
 button{
-    background:#004080;
+    background:#1b4d3e;
     color:white;
     border:none;
     padding:10px 20px;
+    cursor:pointer;
 }
 
 button:hover{
-    background:#0066cc;
+    background:#276e59;
 }
 
 footer{
-    background:#222;
+    /* Dark moss black */
+    background:#14241f;
     color:white;
     text-align:center;
     padding:15px;
@@ -152,6 +163,7 @@ footer{
 
 .flip-card-front{
     background:white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
 .flip-card-front img{
@@ -165,7 +177,8 @@ footer{
 }
 
 .flip-card-back{
-    background:#004080;
+    /* Matching flip-back color to the new theme */
+    background:#1b4d3e;
     color:white;
     transform:rotateY(180deg);
     display:flex;
