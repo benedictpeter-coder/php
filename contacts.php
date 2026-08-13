@@ -74,7 +74,7 @@ $result = mysqli_query($conn, $sql);
     </p>
 
     <footer>
-        <p>&copy; 2026 Lagos Library. All rights reserved.</p>
+        <p>&copy; 2026 online bookshop. All rights reserved.</p>
     </footer>
 
 </body>

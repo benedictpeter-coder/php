@@ -11,7 +11,7 @@ error_reporting(E_ALL);
 $host     = "127.0.0.1"; // 127.0.0.1 bypasses DNS issues in XAMPP
 $user     = "root";      // Default XAMPP username
 $password = "";          // Default XAMPP password is empty
-$database = "OnlineLibrary";
+$database = "Online bookshop";
 
 // 1. Connect to XAMPP MySQL Server
 $conn = mysqli_connect($host, $user, $password);
