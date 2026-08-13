@@ -163,16 +163,12 @@ function toggleInfo() {
 // ==============================
 
 function changeHeading() {
-
-    let heading = document.getElementById("mainHeading");
+    const heading = document.getElementById("mainHeading");
 
     if (heading) {
-
-        heading.textContent =
-            "Thank You for Visiting our online bookshop!";
-
+        heading.textContent = "Thank You for Visiting our online bookshop!";
         heading.style.color = "green";
-
     }
-
 }
+
+
