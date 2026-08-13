@@ -169,7 +169,7 @@ function changeHeading() {
     if (heading) {
 
         heading.textContent =
-            "Thank You for Visiting Lagos Library!";
+            "Thank You for Visiting our online bookshop!";
 
         heading.style.color = "green";
 
